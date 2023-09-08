@@ -4,4 +4,4 @@ for i in reversed(range(97, 123)):
     counter = i
     if counter % 2 != 0:
         counter -= 32
-    print(chr(counter), end="")
+    print("{}".format(chr(counter)), end="")
