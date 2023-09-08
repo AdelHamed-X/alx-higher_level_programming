@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-# Author - Adel Hamed
 
-i = 0
-for c in range(ord('z'), ord('a') - 1, -1):
-    print("{}".format(chr(c - i)), end="")
-    i = 32 if i == 0 else 0
+for i in reversed(range(97, 123)):
+    counter = i
+    if counter % 2 != 0:
+        counter -= 32
+    print(chr(counter), end="")
