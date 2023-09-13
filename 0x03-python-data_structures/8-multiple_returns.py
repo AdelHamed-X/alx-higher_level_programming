@@ -4,8 +4,3 @@ def multiple_returns(sentence):
         return len(sentence), sentence[0]
     else:
         return 0, None
-
-
-sentence = "aewighsopih"
-length, first = multiple_returns(sentence)
-print("Length: {:d} - First character: {}".format(length, first))
