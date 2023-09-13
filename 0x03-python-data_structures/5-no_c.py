@@ -2,6 +2,11 @@
 def no_c(my_string):
     new_string = ""
     for c in my_string:
-        while c not in 'cC':
+        if c not in 'cC':
             new_string += c
     return new_string
+
+
+print(no_c("Best School"))
+print(no_c("Chicago"))
+print(no_c("C is fun!"))
