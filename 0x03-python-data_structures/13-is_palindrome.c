@@ -9,6 +9,7 @@ int is_palindrome(listint_t **head)
 {
     listint_t *node = *head;
     int condition1, node_lentgth = 0, i = 0;
+    int *arr;
 
     if (*head == NULL)
         return (1);
@@ -18,7 +19,7 @@ int is_palindrome(listint_t **head)
         node_lentgth++;
         node = node->next;
     }
-    int *arr = malloc((node_lentgth + 1) * sizeof(int));
+    arr = malloc((node_lentgth + 1) * sizeof(int));
     node = *head;
 
     while (node)
