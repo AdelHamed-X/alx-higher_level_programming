@@ -1,20 +1,18 @@
-# Fibonacci numbers module
+#!/usr/bin/python3
 
-def fib(n):    # write Fibonacci series up to n
-    a, b = 0, 1
-    while a < n:
-        print(a, end=' ')
-        a, b = b, a+b
-    print()
+def square_matrix_simple(matrix=[]):
+    new_matrix = []
+    for column in matrix:
+        res = map(lambda x: x**2, column)
+        new_matrix.append(res)
+    return new_matrix
 
-def fib2(n):   # return Fibonacci series up to n
-    result = []
-    a, b = 0, 1
-    while a < n:
-        result.append(a)
-        a, b = b, a+bv
-    return result
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
 
-if __name__ == "__main__":
-    import sys
-    fib(int(sys.argv[1]))
+new_matrix = square_matrix_simple(matrix)
+print(new_matrix)
+print(matrix)
