@@ -6,5 +6,5 @@ class Square:
     """Initiating an instance with
     size attribute"""
     def __init__(self, size):
-        self.size = size
+        self.__size = size
         pass
