@@ -69,4 +69,4 @@ class Square:
             i += 1
 
     def __str__(self):
-        return self.my_print()
+        return str(self.my_print())
