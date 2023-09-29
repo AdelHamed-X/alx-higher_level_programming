@@ -44,6 +44,8 @@ class Square:
     def area(self):
         return self.__size * self.__size
 
+    """Public instance method:
+    my_print: prints a pattern according to the size"""
     def my_print(self):
         if self.size == 0:
             print()
