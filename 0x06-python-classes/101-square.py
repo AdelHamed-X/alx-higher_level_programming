@@ -47,26 +47,29 @@ class Square:
 
     """Public instance method:
     my_print: prints a pattern according to the size"""
-    def my_print(self):
-        if self.size == 0:
-            print()
+    def __str__(self):
+        result = ""
         i = 0
         m = 0
+
         if self.size > 0:
             while self.position[1] > m:
-                print()
+                result += "\n"
                 m += 1
+
         while self.size > i:
             j = 0
             k = 0
+
             while self.position[0] > k:
-                print(" ", end="")
+                result += " "
                 k += 1
+
             while self.size > j:
-                print("#", end="")
+                result += "#"
                 j += 1
-            print()
+
+            result += "\n"
             i += 1
 
-    def __str__(self):
-        return str(self.my_print())
+        return result
