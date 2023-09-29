@@ -48,16 +48,16 @@ class Square:
         if self.size == 0:
             print()
         i = 0
+        m = 0
+        while self.position[1] > m:
+            print()
+            m += 1
         while self.size > i:
             j = 0
-            k = 1
-            m = 0
-            while self.position[0] > k:
+            k = 0
+            while self.position[0] > k + 1:
                 print("_", end="")
                 k += 1
-            while self.position[1] > m:
-                print()
-                m += 1
             while self.size > j:
                 print("#", end="")
                 j += 1
