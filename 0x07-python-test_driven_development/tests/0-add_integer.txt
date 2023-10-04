@@ -1,11 +1,5 @@
 #!/usr/bin/python3
 
-def add_integer(a, b=98):
-    """
-    :param a: integer a
-    :param b: integer b
-    :return: int = addition of a + b
-
     >>> add_integer = __import__('0-add_integer').add_integer
 
     >>> print(add_integer(1, 2))
@@ -41,5 +35,3 @@ def add_integer(a, b=98):
     Traceback (most recent call last):
     ...
     ValueError: cannot convert float NaN to integer
-
-    """
