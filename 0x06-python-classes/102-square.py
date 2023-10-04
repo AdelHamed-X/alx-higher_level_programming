@@ -44,3 +44,7 @@ class Square:
 
     def __le__(self, other):
         return self.area() <= other.area()
+
+
+x = Square(5)
+print(globals())
