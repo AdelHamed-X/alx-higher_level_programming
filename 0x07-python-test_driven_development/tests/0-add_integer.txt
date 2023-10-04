@@ -2,6 +2,11 @@
 
 def add_integer(a, b=98):
     """
+    :param a: integer a
+    :param b: integer b
+    :return: int = addition of a + b
+
+    >>> add_integer = __import__('0-add_integer').add_integer
     >>> print(add_integer(1, 2))
     3
     >>> print(add_integer(100, -2))
@@ -10,7 +15,13 @@ def add_integer(a, b=98):
     100
     >>> print(add_integer(100.3, -2))
     98
+    >>> try:
+            print(add_integer(4, "School"))
+        except Exception as e:
+            print(e)
+    b must be an integer
     """
+
     if not isinstance(a, int) and not isinstance(a, float):
         raise TypeError("a must be an integer")
     if not isinstance(b, int) and not isinstance(b, float):
