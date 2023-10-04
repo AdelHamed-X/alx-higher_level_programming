@@ -32,6 +32,11 @@ def add_integer(a, b=98):
     >>> print(add_integer(100.3))
     198
 
+    >>> add_integer(2, float('inf'))
+    Traceback (most recent call last):
+    ...
+    OverflowError: cannot convert float infinity to integer
+
     >>> add_integer(2, float('nan'))
     Traceback (most recent call last):
     ...
