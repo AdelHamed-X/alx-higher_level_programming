@@ -16,3 +16,8 @@ class TestMaxInteger(unittest.TestCase):
         """Test an unordered list of integers."""
         unordered = [7, 4, 3, 2]
         self.assertEquals(max_integer(unordered), 7)
+
+    def test_list_negative(self):
+        """Test a list with a negative number."""
+        list_neg = [-1, -2, -3, -4]
+        self.assertEquals(max_integer(list_neg), -1)
