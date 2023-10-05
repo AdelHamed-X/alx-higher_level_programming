@@ -21,3 +21,7 @@ class TestMaxInteger(unittest.TestCase):
         """Test a list with a negative number."""
         list_neg = [-1, -2, -3, -4]
         self.assertEquals(max_integer(list_neg), -1)
+
+    def test_empty_list(self):
+        empty_list = []
+        self.assertEquals(max_integer(empty_list), None)
