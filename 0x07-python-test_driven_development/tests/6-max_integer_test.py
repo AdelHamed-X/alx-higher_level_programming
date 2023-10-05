@@ -30,3 +30,7 @@ class TestMaxInteger(unittest.TestCase):
     def test_empty_list(self):
         empty_list = []
         self.assertEquals(max_integer(empty_list), None)
+
+    def test_one_element(self):
+        one_element = [1]
+        self.assertEquals(max_integer(one_element), 1)
