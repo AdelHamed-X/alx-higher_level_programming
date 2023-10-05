@@ -10,7 +10,6 @@ def matrix_divided(matrix, div):
     :param div: a number (integer or float)
     :return: a new matrix
     """
-    new_matrix = []
     if (not isinstance(matrix, list) or matrix == [] or
             not all(isinstance(row, list) for row in matrix) or
             not all((isinstance(element, float) or isinstance(element, int))
