@@ -19,6 +19,8 @@ def text_indentation(text):
             print(text[ind])
             print()
             continue
-        if text[ind - 1] in '.?:' and ind != 0:
+        if (text[ind - 1] in '.?:' and
+                ind != 0 and
+                text[ind - 1] == ' '):
             continue
         print(text[ind], end="")
