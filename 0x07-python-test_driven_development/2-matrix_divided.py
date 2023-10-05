@@ -10,13 +10,12 @@ def matrix_divided(matrix, div):
     :param div: a number (integer or float)
     :return: a new matrix
     """
-
     new_matrix = []
-    for row in matrix:
-        if (not isinstance(row, list) and
-                not all(isinstance(x, int) for x in row) and
-                not all(isinstance(x, float) for x in row)):
-            raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+    if (not isinstance(matrix, list) or matrix == [] or
+            not all(isinstance(row, list) for row in matrix) or
+            not all((isinstance(element, float) or isinstance(element, int))
+                    for element in [num for row in matrix for num in row])):
+        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
 
     for row in matrix:
         if len(matrix[0]) != len(row):
