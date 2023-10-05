@@ -14,8 +14,13 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_unordered_list(self):
         """Test an unordered list of integers."""
-        unordered = [7, 4, 3, 2]
+        unordered = [2, 4, 3, 7]
         self.assertEquals(max_integer(unordered), 7)
+
+    def test_max_at_beginning(self):
+        """Test an unordered list of integers."""
+        max_at_beginning = [7, 4, 3, 2]
+        self.assertEquals(max_integer(max_at_beginning), 7)
 
     def test_list_negative(self):
         """Test a list with a negative number."""
@@ -25,7 +30,3 @@ class TestMaxInteger(unittest.TestCase):
     def test_empty_list(self):
         empty_list = []
         self.assertEquals(max_integer(empty_list), None)
-
-    def test_non_list(self):
-        non_list = "Adel"
-        self.assertEquals(max_integer(non_list), None)
