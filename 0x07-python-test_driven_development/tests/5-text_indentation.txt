@@ -71,3 +71,6 @@
     How are you:
     <BLANKLINE>
     John
+
+    >>> text_indentation("    Adel")
+    Adel

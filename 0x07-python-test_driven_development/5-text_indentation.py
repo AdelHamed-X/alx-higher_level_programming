@@ -14,13 +14,19 @@ def text_indentation(text):
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
-    for ind in range(len(text)):
-        if text[ind] in '.?:':
-            print(text[ind])
-            print()
+    c = 0
+    while c < len(text) and text[c] == ' ':
+        c += 1
+
+    while c < len(text):
+        print(text[c], end="")
+        if text[c] == "\n" or text[c] in ".?:":
+            if text[c] in ".?:":
+                print("\n")
+            c += 1
+            while c < len(text) and text[c] == ' ':
+                c += 1
             continue
-        if (text[ind - 1] in '.?:' and
-                ind != 0 and
-                text[ind] == ' '):
-            continue
-        print(text[ind], end="")
+        c += 1
+#
+# text_indentation("     aDel")
