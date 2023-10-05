@@ -22,15 +22,22 @@ class TestMaxInteger(unittest.TestCase):
         max_at_beginning = [7, 4, 3, 2]
         self.assertEquals(max_integer(max_at_beginning), 7)
 
-    def test_list_negative(self):
-        """Test a list with a negative number."""
-        list_neg = [-1, -2, -3, -4]
-        self.assertEquals(max_integer(list_neg), -1)
+    def test_all_negative(self):
+        """Test a list with all negative numbers."""
+        all_neg = [-1, -2, -3, -4]
+        self.assertEquals(max_integer(all_neg), -1)
+
+    def test_one_negative(self):
+        """Test a list with only one negative number."""
+        one_neg = [-1, 2, 3, 4]
+        self.assertEquals(max_integer(one_neg), 4)
 
     def test_empty_list(self):
+        """Test an empty list."""
         empty_list = []
         self.assertEquals(max_integer(empty_list), None)
 
     def test_one_element(self):
+        """Test a list of one element"""
         one_element = [1]
         self.assertEquals(max_integer(one_element), 1)
