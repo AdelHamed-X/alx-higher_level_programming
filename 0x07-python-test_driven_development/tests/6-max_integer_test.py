@@ -25,3 +25,7 @@ class TestMaxInteger(unittest.TestCase):
     def test_empty_list(self):
         empty_list = []
         self.assertEquals(max_integer(empty_list), None)
+
+    def test_non_list(self):
+        non_list = "Adel"
+        self.assertEquals(max_integer(non_list), None)
