@@ -58,7 +58,7 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return ""
 
-        rectangle = list(map(lambda x: Rectangle.print_symbol * self.__width,
+        rectangle = list(map(lambda x: self.print_symbol * self.__width,
                              range(self.__height)))
         string = ""
         for idx in range(len(rectangle)):
