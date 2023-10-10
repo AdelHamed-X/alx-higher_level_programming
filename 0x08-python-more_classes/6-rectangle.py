@@ -7,6 +7,7 @@ This module creates a rectangle class
 class Rectangle:
     """class Rectangle"""
     number_of_instances = 0
+    print_symbol = '#'
 
     def __init__(self, width=0, height=0):
         self.width = width
@@ -57,7 +58,7 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return ""
 
-        rectangle = list(map(lambda x: '#' * self.__width,
+        rectangle = list(map(lambda x: Rectangle.print_symbol * self.__width,
                              range(self.__height)))
         string = ""
         for idx in range(len(rectangle)):
