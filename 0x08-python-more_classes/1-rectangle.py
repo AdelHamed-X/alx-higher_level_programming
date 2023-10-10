@@ -7,8 +7,8 @@ This module creates a rectangle class
 class Rectangle:
     """class Rectangle"""
     def __init__(self, width=0, height=0):
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
@@ -22,12 +22,12 @@ class Rectangle:
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
-        self.__width__ = value
+        self.__width = value
 
     @property
     def height(self):
         """height Getter"""
-        return self.__height__
+        return self.__height
 
     @height.setter
     def height(self, value):
@@ -36,9 +36,4 @@ class Rectangle:
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
-        self.__height__ = value
-
-
-my_rectangle = Rectangle(2, 4)
-for k in sorted(my_rectangle.__dict__):
-    print("{}: {}".format(k, my_rectangle.__dict__[k]))
+        self.__height = value
