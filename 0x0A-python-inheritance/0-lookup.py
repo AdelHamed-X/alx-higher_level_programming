@@ -1,15 +1,14 @@
 #!/usr/bin/python3
 """
-This module contains a function that returns availble attributes
-and methods for an object
+This module has a function that returns the list of available
+attributes and methods of an object
 """
 
 
 def lookup(obj):
     """
-    looks up for availble attributes and methods of an object
-    :param obj: an instance
-    :return: list of availble attr. and methods
+    returns the list of available
+    attributes and methods of obj
+    :param obj: an object
     """
-
-    return dir(obj)
+    return obj.__dir__()
