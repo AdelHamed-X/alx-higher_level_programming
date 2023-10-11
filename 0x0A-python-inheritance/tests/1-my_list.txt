@@ -3,6 +3,7 @@
     True
 
     >>> l = MyList()
+    >>> l.print_sorted()
     []
 
     >>> l.append(1)
@@ -18,3 +19,11 @@
     >>> l.append(-2)
     >>> l.print_sorted()
     [-2, 1, 3, 6, 7]
+
+    >>> l = MyList()
+    >>> l.append(4)
+    >>> l.append(3)
+    >>> l.append(2)
+    >>> l.append(1)
+    >>> l.print_sorted()
+    [1, 2, 3, 4]
