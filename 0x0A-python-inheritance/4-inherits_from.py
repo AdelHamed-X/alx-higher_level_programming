@@ -12,6 +12,6 @@ def inherits_from(obj, a_class):
     :param a_class: a class
     :return: True, False
     """
-    if issubclass(type(obj), a_class):
+    if isinstance(obj, a_class) and type(obj) != a_class:
         return True
     return False
