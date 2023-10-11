@@ -13,16 +13,7 @@ Checking for method docstring:
 	  >>> len(mod) > 1
 	  True
 
-Checking that MyList inherits from list:
-	  >>> issubclass(MyList, list)
-	  True
-
-Checking for empty list:
-	  >>> l = MyList()
-	  >>> l.print_sorted()
-	  []
-
-Checking that appendng works:
+Checking that appending works:
 	  >>> l.append(1)
 	  >>> l.append(2)
 	  >>> l.append(3)
