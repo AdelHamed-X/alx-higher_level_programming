@@ -1,0 +1,4 @@
+
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("int", 2)
+
