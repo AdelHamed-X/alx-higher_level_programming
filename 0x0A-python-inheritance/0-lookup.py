@@ -11,4 +11,4 @@ def lookup(obj):
     attributes and methods of obj
     :param obj: an object
     """
-    return obj.__dir__()
+    return dir(obj)
