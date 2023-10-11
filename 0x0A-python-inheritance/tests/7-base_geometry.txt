@@ -1,7 +1,7 @@
 
     >>> bg = BaseGeometry()
     >>> bg.integer_validator("int", 2)
-
+    <BLANKLINE>
 
     >>> bg.integer_validator("int", -2)
     [ValueError] int must be greater than 0
