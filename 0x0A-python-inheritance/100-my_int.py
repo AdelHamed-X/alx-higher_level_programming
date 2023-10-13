@@ -13,10 +13,10 @@ class MyInt(int):
         """
         inverts == to !=
         """
-        return self != other
+        return super().__ne__(other)
 
     def __ne__(self, other):
         """
         inverts != to ==
         """
-        return self == other
+        return super().__eq__(other)
