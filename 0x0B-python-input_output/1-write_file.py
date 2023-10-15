@@ -7,7 +7,7 @@ write to a file and returns the number of chars written
 
 def write_file(filename="", text=""):
     """
-    prints the content of a file to stdout
+    write to a file and returns the number of chars written
     :param filename: a text file
     :param text: txt to be written
     :return: None
