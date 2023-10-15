@@ -10,5 +10,5 @@ def append_write(filename="", text=""):
     a function that appends a string at the end of a text file
     :return: the added number of chars
     """
-    with open(filename, 'wa', encoding="utf-8") as f:
+    with open(filename, 'a', encoding="utf-8") as f:
         return f.write(text)
