@@ -12,5 +12,4 @@ def load_from_json_file(filename):
     :return: None
     """
     with open(filename, 'r', encoding="utf-8") as f:
-        for line in f:
-            return json.loads(line)
+        return json.load(f)
