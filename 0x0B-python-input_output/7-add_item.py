@@ -2,13 +2,14 @@
 """Add all arguments to a Python list and save them to a file."""
 import sys
 
-save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
-load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
+if __name__ == "__main__":
+    save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
+    load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
-newlist = []
-newlist.extend(load_from_json_file('add_item.json'))
+    newlist = []
+    newlist.extend(load_from_json_file('add_item.json'))
 
-for arg in sys.argv[1:]:
-    newlist.append(arg)
+    for arg in sys.argv[1:]:
+        newlist.append(arg)
 
-save_to_json_file(newlist, 'add_item.json')
+    save_to_json_file(newlist, 'add_item.json')
