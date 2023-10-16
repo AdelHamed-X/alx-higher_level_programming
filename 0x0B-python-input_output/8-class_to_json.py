@@ -3,8 +3,6 @@
 This module has a function that returns __dict__
 of a class object
 """
-import json
-
 
 def class_to_json(obj):
     """
