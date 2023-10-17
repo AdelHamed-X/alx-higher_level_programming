@@ -6,8 +6,25 @@ Base = __import__('base').Base
 
 
 class Rectangle(Base):
-    """Represent a rectangle."""
+    """Represent a rectangle.
 
+        This class represents a rectangle with a given width,
+        height, position (x, y), and an optional identifier.
+        It inherits from the Base class.
+
+        Attributes:
+            width (int): The width of the rectangle.
+            height (int): The height of the rectangle.
+            x (int): The x coordinate of the top-left corner of the rectangle.
+            y (int): The y coordinate of the top-left corner of the rectangle.
+            id (int): The identifier of the rectangle.
+
+        Raises:
+            TypeError: If either width or height is not an integer.
+            ValueError: If either width or height is less than or equal to 0.
+            TypeError: If either x or y is not an integer.
+            ValueError: If either x or y is less than 0.
+        """
     def __init__(self, width, height, x=0, y=0, id=None):
         """Initialize a new Rectangle.
 
@@ -17,12 +34,8 @@ class Rectangle(Base):
         x (int): The x coordinate of the new Rectangle.
         y (int): The y coordinate of the new Rectangle.
         id (int): The identity of the new Rectangle.
-            Raises:
-        TypeError: If either of width or height is not an int.
-        ValueError: If either of width or height <= 0.
-        TypeError: If either of x or y is not an int.
-        ValueError: If either of x or y < 0.
         """
+
         self.width = width
         self.height = height
         self.x = x
@@ -36,6 +49,7 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
+        """Setter/getter of the width of the Rectangle."""
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -49,6 +63,7 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
+        """Setter/getter of the height of the Rectangle."""
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -62,6 +77,7 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
+        """Setter/getter of the x coordinate of the Rectangle."""
         if type(value) is not int:
             raise TypeError("x must be an integer")
         if value < 0:
@@ -75,6 +91,7 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
+        """Setter/getter of the Y coordinate of the Rectangle."""
         if type(value) is not int:
             raise TypeError("y must be an integer")
         if value < 0:
