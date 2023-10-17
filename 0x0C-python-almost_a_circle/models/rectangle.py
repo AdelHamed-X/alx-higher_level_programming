@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Defines a rectangle class."""
 Base = __import__('base').Base
+"""Base class to inherit from"""
 
 
 class Rectangle(Base):
