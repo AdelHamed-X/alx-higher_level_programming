@@ -1,13 +1,12 @@
 #!/usr/bin/python3
-"""
-Rectangle class
-"""
+"""Defines a rectangle class."""
+
 
 Base = __import__('base').Base
 
 
 class Rectangle(Base):
-    """Rectangle class"""
+    """Represent a rectangle."""
     def __init__(self, width, height, x=0, y=0, id=None):
         """Initialize a new Rectangle.
 
