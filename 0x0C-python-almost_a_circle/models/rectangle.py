@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Defines a rectangle class."""
-from base import Base
+from models.base import Base
 
 
 class Rectangle(Base):
@@ -152,4 +152,7 @@ class Rectangle(Base):
                     self.y = v
 
     def to_dictionary(self):
+        """
+        Returns dict representation of Rectangle
+        """
         return self.__dict__
