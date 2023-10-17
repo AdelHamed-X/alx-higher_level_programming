@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Defines a rectangle class."""
-from models.base import Base
+from base import Base
 
 
 class Rectangle(Base):
@@ -123,8 +123,16 @@ class Rectangle(Base):
         """
         assigns an argument to each attribute
         """
-        self.id = args[0]
-        self.width = args[1]
-        self.height = args[2]
-        self.x = args[3]
-        self.y = args[4]
+        counter = 0
+        for arg in args:
+            if counter == 0:
+                self.id = arg
+            elif counter == 1:
+                self.width = arg
+            elif counter == 2:
+                self.height = arg
+            elif counter == 3:
+                self.x = arg
+            elif counter == 4:
+                self.y = arg
+            counter += 1
