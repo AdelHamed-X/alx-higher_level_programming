@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Defines a rectangle class."""
-from models.base import Base
+from base import Base
 
 
 class Rectangle(Base):
@@ -120,6 +120,9 @@ class Rectangle(Base):
                 f" {self.width}/{self.height}")
 
     def update(self, *args):
+        """
+        assigns an argument to each attribute
+        """
         self.id = args[0]
         self.width = args[1]
         self.height = args[2]
