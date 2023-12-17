@@ -6,13 +6,13 @@ from sys import argv
 
 mysql_username, mysql_password, database_name = argv[1], argv[2], argv[3]
 
-db = MySQLdb.connect(host='localhost',
+if __name__ == '__main__':
+    db = MySQLdb.connect(host='localhost',
                      user=f'{mysql_username}',
                      passwd=f'{mysql_password}',
                      db=f'{database_name}',
                      port=3306)
 
-if __name__ == '__main__':
     cur = db.cursor()
     cur.execute("SELECT * FROM states")
     rows = cur.fetchall()
