@@ -12,11 +12,12 @@ db = MySQLdb.connect(host='localhost',
                      db=f'{database_name}',
                      port=3306)
 
-db_cursor = db.cursor()
+if __name__ == '__main__':
+    db_cursor = db.cursor()
 
-db_cursor.execute("SELECT * FROM states")
+    db_cursor.execute("SELECT * FROM states")
 
-rows = db_cursor.fetchall()
+    rows = db_cursor.fetchall()
 
-for row in rows:
-  print(row)
+    for row in rows:
+        print(row)
