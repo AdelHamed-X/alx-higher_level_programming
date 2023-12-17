@@ -7,8 +7,7 @@ from sys import argv
 mysql_username, mysql_password, database_name = argv[1], argv[2], argv[3]
 
 if __name__ == '__main__':
-    db = MySQLdb.connect(host='localhost',
-                         user=f'{mysql_username}',
+    db = MySQLdb.connect(user=f'{mysql_username}',
                          passwd=f'{mysql_password}',
                          db=f'{database_name}',
                          port=3306)
