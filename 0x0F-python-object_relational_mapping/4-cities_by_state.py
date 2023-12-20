@@ -10,7 +10,9 @@ if __name__ == '__main__':
                          passwd=sys.argv[2], db=sys.argv[3], port=3306)
 
     cur = db.cursor()
-    cur.execute("SELECT cities.id, cities, states FROM cities;")
+    cur.execute("SELECT *"
+                "FROM cities"
+                "ORDER BY cities.id;")
     states = cur.fetchall()
 
     for state in states:
