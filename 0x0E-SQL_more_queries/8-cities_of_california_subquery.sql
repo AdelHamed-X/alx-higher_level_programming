@@ -2,4 +2,8 @@
 -- that can be found in the database hbtn_0d_usa.
 SELECT id, name
 FROM cities
-WHERE cities.state_id = states.id
+WHERE state_id = (
+    SELECT id
+    FROM states
+    WHERE name LIKE 'California'
+);
