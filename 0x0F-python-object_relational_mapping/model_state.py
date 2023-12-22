@@ -5,6 +5,7 @@ from sqlalchemy import Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
+engine = create_engine('MySQL://root:root@localhost', port=3306)
 
 
 class State(Base):
