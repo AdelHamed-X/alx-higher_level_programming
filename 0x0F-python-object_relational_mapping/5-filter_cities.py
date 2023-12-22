@@ -16,7 +16,7 @@ if __name__ == '__main__':
 
     cur = db.cursor()
     cur.execute("SELECT cities.name FROM cities "
-                "JOIN states ON cities.state_id = cities.id "
+                "JOIN states ON cities.state_id = states.id "
                 "WHERE states.name = %s;", (state, ))
 
     cities = cur.fetchall()
