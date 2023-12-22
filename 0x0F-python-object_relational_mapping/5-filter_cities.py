@@ -21,5 +21,5 @@ if __name__ == '__main__':
                 "ORDER BY cities.id;", (state, ))
 
     cities = cur.fetchall()
-    if cities:
-        print(", ".join(city[0] for city in cities))
+
+    print(", ".join(city[0] for city in cities))
