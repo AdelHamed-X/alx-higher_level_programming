@@ -11,8 +11,8 @@ if __name__ == '__main__':
 
     engine = create_engine(f"mysql+mysqldb://{usr}:{pwd}@localhost/{db}")
     with engine.connect() as conn:
-        result = conn.execute(text("SELECT states.id, states.name FROM states\
-                                   ORDER BY states.id;"))
+        result = conn.execute(text("SELECT states.id, states.name FROM states "
+                                   "ORDER BY states.id;"))
 
     for state in result:
         print(f"{state[0]}: {state[1]}")
