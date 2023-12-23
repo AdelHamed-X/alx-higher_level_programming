@@ -12,7 +12,7 @@ if __name__ == '__main__':
     cur = db.cursor()
     cur.execute("SELECT * FROM states "
                 "WHERE name = '{}' "
-                "COLLATE Latin1_General_CS_AS;".format(sys.argv[4]))
+                "COLLATE utf8mb4_bin;".format(sys.argv[4]))
 
     states = cur.fetchall()
 
