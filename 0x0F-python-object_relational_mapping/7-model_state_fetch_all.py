@@ -6,7 +6,7 @@ from sys import argv
 
 if __name__ == '__main__':
     from model_state import Base, State
-    
+
     usr, pwd, db = argv[1:]
 
     engine = create_engine(f"mysql+mysqldb://{usr}:{pwd}@localhost/{db}")
