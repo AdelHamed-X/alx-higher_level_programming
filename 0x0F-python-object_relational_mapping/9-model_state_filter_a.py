@@ -14,6 +14,6 @@ if __name__ == '__main__':
     with engine.connect() as conn:
         result = conn.execute(text("SELECT states.id, states.name FROM states"
                               " WHERE name LIKE '%a%' ORDER BY states.id;"))
-    
+
     for state in result:
         print(f"{state.id}: {state.name}")
