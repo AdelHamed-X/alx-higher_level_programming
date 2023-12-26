@@ -20,4 +20,7 @@ if __name__ == '__main__':
                              "WHERE states.name LIKE :state;"), {"state": state_name})
         
     state = result.fetchone()
-    print(state.id)
+    if state:
+        print(state.id)
+    else:
+        print("Not found")
