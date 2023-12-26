@@ -18,7 +18,7 @@ if __name__ == '__main__':
 
     result = session.execute(text("SELECT states.id FROM states "
                              "WHERE states.name LIKE :state;"),
-                                {"state": state_name})
+                            {"state": state_name})
 
     state = result.fetchone()
     if state:
