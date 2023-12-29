@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-""" A script that adds the State object “Louisiana”
-to the database hbtn_0e_6_usa """
+""" A script that changes the name of a State object
+from the database hbtn_0e_6_usa """
 
 from model_state import Base, State
-from sqlalchemy import create_engine, text
+from sqlalchemy import create_engine, text, update
 from sqlalchemy.orm import sessionmaker
 from sys import argv
 
@@ -16,7 +16,8 @@ if __name__ == '__main__':
 
     Session = sessionmaker()
     session = Session(bind=engine)
+    
+    stmt = (update(State).where(State.id == 2).values(name="New Mexico"))
 
     with session.begin():
-        state_to_update = session.query(State).filter_by(id=2).first()
-        state_to_update.name = "New Mexico"
+        session.execute(stmt)
