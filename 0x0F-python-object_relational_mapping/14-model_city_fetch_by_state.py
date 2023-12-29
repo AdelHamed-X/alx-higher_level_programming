@@ -8,18 +8,19 @@ from sqlalchemy import create_engine, select
 from sqlalchemy.orm import sessionmaker
 from sys import argv
 
-usr, pwd, db = argv[1:]
+if __name__ == '__main__':
+    usr, pwd, db = argv[1:]
 
-engine = create_engine(f"mysql+mysqldb://{usr}:{pwd}@localhost/{db}")
+    engine = create_engine(f"mysql+mysqldb://{usr}:{pwd}@localhost/{db}")
 
-Session = sessionmaker()
-session = Session(bind=engine)
+    Session = sessionmaker()
+    session = Session(bind=engine)
 
-stmt = select(City.name, City.id, State.name).join_from(City, State)\
-.order_by(City.id)
+    stmt = select(City.name, City.id, State.name).join_from(City, State)\
+    .order_by(City.id)
 
-with session.begin():
-    result = session.execute(stmt)
+    with session.begin():
+        result = session.execute(stmt)
 
-for row in result:
-    print(f"{row[2]}: ({row[1]}) {row[0]}")
+    for row in result:
+        print(f"{row[2]}: ({row[1]}) {row[0]}")
