@@ -16,8 +16,8 @@ if __name__ == '__main__':
     Session = sessionmaker()
     session = Session(bind=engine)
 
-    stmt = select(City.name, City.id, State.name).join_from(City, State)\
-    .order_by(City.id)
+    stmt = select(City.name, City.id, State.name).join_from(City, State)
+                  .order_by(City.id)
 
     with session.begin():
         result = session.execute(stmt)
