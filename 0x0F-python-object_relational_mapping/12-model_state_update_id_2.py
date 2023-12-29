@@ -16,7 +16,7 @@ if __name__ == '__main__':
 
     Session = sessionmaker()
     session = Session(bind=engine)
-    
+
     stmt = (update(State).where(State.id == 2).values(name="New Mexico"))
 
     with session.begin():
