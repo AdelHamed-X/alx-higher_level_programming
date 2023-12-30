@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ This module contains City Class """
 
-from model_state import Base, State
+from relationship_state import Base, State
 from sqlalchemy import Column, ForeignKey, Integer, String
 from sqlalchemy.orm import Mapped, relationship
 
