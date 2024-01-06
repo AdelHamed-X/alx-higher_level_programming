@@ -1,2 +1,1 @@
-# Time complexity for 6-peak.py
 O(log(n))
