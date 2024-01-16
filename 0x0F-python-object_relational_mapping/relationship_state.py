@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 """ This module has the State class """
 
-from sqlalchemy import Column, Integer, String, MetaData
+from sqlalchemy import Column, Integer, String, MetaData, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import Mapped, relationship
+from sqlalchemy.orm import Mapped, relationship, mapped_column
+# from relationship_city import City
+from typing import List
 
 mymetadata = MetaData()
 Base = declarative_base(metadata=mymetadata)
@@ -16,4 +18,4 @@ class State(Base):
     id = Column('id', Integer, unique=True,
                 nullable=False, primary_key=True)
     name = Column('name', String(128), nullable=False)
-    cities: Mapped[list["City"]] = relationship(back_populates="state")
+    cities: Mapped[List['City']] = relationship(backref='state')
