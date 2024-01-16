@@ -4,7 +4,6 @@
 from sqlalchemy import Column, Integer, String, MetaData, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import Mapped, relationship, mapped_column
-# from relationship_city import City
 from typing import List
 
 mymetadata = MetaData()
