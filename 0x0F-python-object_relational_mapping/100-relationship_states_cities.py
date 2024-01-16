@@ -10,7 +10,7 @@ from relationship_state import Base, State
 
 
 if __name__ == '__main__':
-    
+
     usr, pwd, db = argv[1:]
 
     engine = create_engine(f"mysql+mysqldb://{usr}:{pwd}@localhost/{db}")
@@ -26,4 +26,3 @@ if __name__ == '__main__':
         California.cities.append(San_Francisco)
         session.add_all([California, San_Francisco])
     session.commit()
-    
