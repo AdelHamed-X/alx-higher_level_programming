@@ -18,5 +18,5 @@ if __name__ == '__main__':
 
     for instance in session.query(State):
         for city_instance in instance.cities:
-            print(f"{city_instance.id}: {city_instance.name} -> 
-                  {instance.name}")
+            print(f"{city_instance.id}: {city_instance.name} "
+                  f"-> {instance.name}")
