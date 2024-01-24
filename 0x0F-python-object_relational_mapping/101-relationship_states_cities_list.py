@@ -22,6 +22,3 @@ if __name__ == '__main__':
         print(f"{instance.id}: {instance.name}")
         for instance_city in instance.cities:
             print(f"    {instance_city.id}: {instance_city.name}")
-    
-
-
