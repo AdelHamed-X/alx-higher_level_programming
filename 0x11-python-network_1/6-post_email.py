@@ -10,5 +10,5 @@ from sys import argv
 
 
 if __name__ == "__main__":
-    request = post(argv[1], data={"email": {argv[2]}})
+    request = post(argv[1], {"email": {argv[2]}})
     print(request.text)
