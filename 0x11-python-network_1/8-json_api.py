@@ -8,9 +8,10 @@ from sys import argv
 
 if __name__ == '__main__':
 
-    data = {'q': ""}
     if argv[1]:
         data = {'q': f"{argv[1]}"}
+    else:
+        data = {'q': ""}
 
     resp = requests.post('http://0.0.0.0:5000/search_user', data)
 
