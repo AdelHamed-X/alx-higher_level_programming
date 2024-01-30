@@ -11,4 +11,5 @@ from sys import argv
 
 if __name__ == "__main__":
     request = post(argv[1], f'"email": {argv[2]}')
+    request = request.encoding('utf-8')
     print(request.content)
