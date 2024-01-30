@@ -9,7 +9,6 @@ if __name__ == '__main__':
     from urllib.error import HTTPError
     from sys import argv
 
-    
     try:
         with request.urlopen(argv[1]) as response:
             print(response.read().decode('utf-8'))
