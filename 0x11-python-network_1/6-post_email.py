@@ -5,7 +5,7 @@
 - takes email as a parameter
 - displays the body of the response """
 
-from urllib import request, parse
+from requests import post
 from sys import argv
 
 
