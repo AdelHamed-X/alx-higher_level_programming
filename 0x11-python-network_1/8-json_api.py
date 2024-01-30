@@ -14,4 +14,4 @@ if __name__ == '__main__':
         q = ""
 
     resp = requests.post('http://0.0.0.0:5000/search_user', data=q)
-    print(resp.text)
+    print(resp.json())
