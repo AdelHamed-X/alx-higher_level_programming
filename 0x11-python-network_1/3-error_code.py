@@ -8,8 +8,8 @@ from sys import argv
 
 
 if __name__ == '__main__':
-    with request.urlopen(f'{argv[1]}') as response:
-        try:
+    try:
+        with request.urlopen(f'{argv[1]}') as response:
             print(response.read().decode('utf-8'))
-        except HTTPError as e:
-            print(f'Error code: {e.code}')
+    except HTTPError as e:
+        print(f'Error code: {e.code}')
