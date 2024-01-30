@@ -10,8 +10,5 @@ from sys import argv
 
 
 if __name__ == "__main__":
-    data = parse.urlencode({'email': f'{argv[2]}'})
-    data = data.encode('ascii')
-
-    with request.urlopen(f'{argv[1]}', data)as resp:
-        print(resp.read().decode('utf-8'))
+    request = post(argv[1], argv[2])
+    print(request)
