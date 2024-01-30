@@ -1,5 +1,9 @@
 #!/usr/bin/python3
-""" A Python script that takes in a URL and an email, sends a POST request to the passed URL """
+""" A Python script that:
+- takes in a URL
+- sends a POST request to the passed URL
+- takes email as a parameter
+- displays the body of the response """
 
 from urllib import request, parse
 from sys import argv
