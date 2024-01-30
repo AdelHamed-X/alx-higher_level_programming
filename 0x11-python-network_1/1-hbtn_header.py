@@ -6,5 +6,5 @@ from requests import get
 from sys import argv
 
 
-resp = get(f"{argv[1]}")
-print(resp.headers["X-Request-Id"])
+with get(f"{argv[1]}") as resp:
+    print(resp.headers["X-Request-Id"])
