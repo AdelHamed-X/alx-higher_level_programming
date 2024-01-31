@@ -7,7 +7,6 @@ from sys import argv
 
 
 if __name__ == '__main__':
-
     if len(argv) > 1:
         data = {'q': f"{argv[1]}"}
     else:
@@ -22,4 +21,3 @@ if __name__ == '__main__':
             print("No result")
     except:
         print("Not a valid JSON")
-        
