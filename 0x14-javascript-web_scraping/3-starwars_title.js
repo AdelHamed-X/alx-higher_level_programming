@@ -9,4 +9,4 @@ request(`https://swapi-api.alx-tools.com/api/films/${process.argv[2]}`,
       console.log(JSON.parse(body).title);
     }
   }
-)
+);
