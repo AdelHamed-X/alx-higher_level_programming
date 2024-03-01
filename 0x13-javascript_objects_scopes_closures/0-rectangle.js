@@ -2,4 +2,4 @@
 class Rectangle {
 }
 
-global.Rectangle = Rectangle;
+module.exports = Rectangle;
