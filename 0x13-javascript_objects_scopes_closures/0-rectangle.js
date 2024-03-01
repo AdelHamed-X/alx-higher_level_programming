@@ -2,4 +2,4 @@
 class Rectangle {
 }
 
-exports.Rectangle = Rectangle;
+global.Rectangle = Rectangle;
