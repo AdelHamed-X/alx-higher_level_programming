@@ -1,6 +1,6 @@
 #!/usr/bin/node
 $('#toggle_header').click(function () {
-  const header = header;
+  const header = $('header');
 
   if (header.hasClass('red') && header.hasClass('green')) {
     header.removeClass('red');
